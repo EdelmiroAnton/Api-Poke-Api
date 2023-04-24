@@ -4,11 +4,13 @@ import "./splash.css";
 
 function Splash() {
   return (
-    <Box class="animation-target splash">
-      <Typography variant="h1" class="titulo">
-        API POKE API
-      </Typography>
-    </Box>
+    <>
+      <Box className="animation-target splash">
+        <Typography variant="h1" class="titulo">
+          API POKE API
+        </Typography>
+      </Box>
+    </>
   );
 }
 
