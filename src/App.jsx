@@ -7,7 +7,6 @@ function App() {
   return (
     <>
       <Splash />
-      <Box sx={{ color: "red" }}>tests</Box>
     </>
   );
 }
