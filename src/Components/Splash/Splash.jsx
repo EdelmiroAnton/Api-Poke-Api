@@ -1,8 +1,17 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
-import "./splash.css";
+import "./styles.css";
 
 function Splash() {
+  const addAndRemoveSplash = () => {
+    const splash = document.querySelector(".splash");
+    splash.classList.add("display-none");
+  };
+
+  setTimeout(() => {
+    addAndRemoveSplash();
+  }, 1500);
+
   return (
     <>
       <Box className="animation-target splash">
