@@ -15,7 +15,7 @@ function Splash() {
   return (
     <>
       <Box className="animation-target splash">
-        <Typography variant="h1" class="titulo">
+        <Typography variant="h1" className="titulo">
           API POKE API
         </Typography>
       </Box>
