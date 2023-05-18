@@ -4,10 +4,8 @@ import {
   DialogTitle,
   DialogContent,
   DialogContentText,
-  Button,
   Slide,
 } from "@mui/material";
-
 import "./styles.css";
 
 const Transition = forwardRef(function Transition(props, ref) {
@@ -17,15 +15,15 @@ const Transition = forwardRef(function Transition(props, ref) {
 function Modal() {
   const [open, setOpen] = useState(false);
 
-  const closeModal = () => {
-    setOpen(false);
-  };
-
   useEffect(() => {
     setTimeout(() => {
       setOpen(true);
     }, 1550);
   }, []);
+
+  const closeModal = () => {
+    setOpen(false);
+  };
 
   return (
     <>
@@ -36,18 +34,35 @@ function Modal() {
         aria-labelledby="dialog-title"
         aria-describedby="dialog-description"
       >
-        <DialogTitle id="dialog-title">
+        <DialogTitle
+          id="dialog-title"
+          sx={{
+            textAlign: "center",
+            fontFamily: "Poppins",
+            fontWeight: "bold",
+          }}
+        >
           Bienvenido a la API de Pokemon!
         </DialogTitle>
-        <DialogContent className="parrafoDialog">
-          <DialogContentText id="dialog-description">
+        <DialogContent>
+          <DialogContentText
+            id="dialog-description"
+            sx={{
+              fontFamily: "Poppins",
+              fontWeight: "bold",
+              textAlign: "justify",
+              color: "grey",
+            }}
+          >
             En este sencillo simulador podrás buscar los 898 Pokemones que la
             API tiene para ofrecernos. Tendrás su imagen, su nombre, sus
             habilidades y que tipo de Pokemon es! Haz click en el botón para
             comenzar.
           </DialogContentText>
         </DialogContent>
-        <Button onClick={closeModal}>Comencemos!</Button>
+        <button onClick={closeModal} className="botonDialog">
+          <span className="textButton">Comencemos!</span>
+        </button>
       </Dialog>
     </>
   );
