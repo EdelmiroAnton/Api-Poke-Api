@@ -34,7 +34,7 @@ function Modal() {
           Bienvenido a la API de Pokemon!
         </DialogTitle>
         <DialogContent className="parrafoDialog">
-          <DialogContentText>
+          <DialogContentText id="dialog-description">
             En este sencillo simulador podrás buscar los 898 Pokemones que la
             API tiene para ofrecernos. Tendrás su imagen, su nombre, sus
             habilidades y que tipo de Pokemon es! Haz click en el botón para
