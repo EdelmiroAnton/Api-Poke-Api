@@ -1,13 +1,18 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, forwardRef } from "react";
 import {
   Dialog,
   DialogTitle,
   DialogContent,
   DialogContentText,
   Button,
+  Slide,
 } from "@mui/material";
 
 import "./styles.css";
+
+const Transition = forwardRef(function Transition(props, ref) {
+  return <Slide direction="right" ref={ref} {...props} />;
+});
 
 function Modal() {
   const [open, setOpen] = useState(false);
@@ -25,6 +30,7 @@ function Modal() {
   return (
     <>
       <Dialog
+        TransitionComponent={Transition}
         id="dialog"
         open={open}
         aria-labelledby="dialog-title"
