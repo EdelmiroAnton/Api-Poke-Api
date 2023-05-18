@@ -1,5 +1,11 @@
+import Modal from "../Modal/Modal";
+
 function Card() {
-  return <div>Card</div>;
+  return (
+    <>
+      <Modal />
+    </>
+  );
 }
 
 export default Card;
