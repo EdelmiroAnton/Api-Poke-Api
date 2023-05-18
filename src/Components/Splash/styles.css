@@ -1,6 +1,5 @@
 .titulo {
   color: red;
-  font-family: "Poppins", sans-serif;
 }
 
 .splash {
@@ -16,8 +15,8 @@
   left: 0;
 }
 
-.splash h1 {
-  line-height: 90vh;
+.splash .titulo {
+  line-height: 100vh;
 }
 
 .display-none {
