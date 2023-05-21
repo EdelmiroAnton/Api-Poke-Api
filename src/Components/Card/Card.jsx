@@ -1,13 +1,23 @@
 import { useEffect, useState } from "react";
 import Modal from "../Modal/Modal";
+import { Button } from "@mui/material";
 
 function Card() {
+  const [id, setId] = useState(1);
   const [name, setName] = useState("");
   const [img, setImg] = useState(null);
   const [abilities, setAbilities] = useState([]);
   const [type, setType] = useState([]);
 
-  const URL = `https://pokeapi.co/api/v2/pokemon/${302}/`;
+  const handlerSum = () => {
+    setId(id + 1);
+  };
+
+  const handlerSubtract = () => {
+    setId(id - 1);
+  };
+
+  const URL = `https://pokeapi.co/api/v2/pokemon/${id}/`;
 
   useEffect(() => {
     const fetchPokemon = async () => {
@@ -20,17 +30,17 @@ function Card() {
       setType(result.types);
     };
     fetchPokemon();
-  }, []);
+  }, [id]);
 
-  console.log(type);
   return (
     <>
       <img src={img} alt="pokemon_image" />
+      <div>{id}</div>
       <h3>{name.toUpperCase()}</h3>
       <h4>Abilities</h4>
       <ul>
         {abilities.map((el) => (
-          <li>
+          <li key={name.id}>
             {/* Get and Uppercase the first character of the string */}
             {el.ability.name.charAt(0).toUpperCase()}
             {/* Add the first character to the rest of the string */}
@@ -41,12 +51,20 @@ function Card() {
       <h4>Pokémon Type</h4>
       <ul>
         {type.map((el) => (
-          <li>
+          <li key={name.id}>
             {el.type.name.charAt(0).toUpperCase()}
             {el.type.name.slice(1)}
           </li>
         ))}
       </ul>
+      <div>
+        <Button onClick={handlerSum}> + </Button>
+        <Button onClick={handlerSubtract} disabled={id === 1}>
+          -
+        </Button>
+        <Button>OK</Button>
+      </div>
+      <input type="number" />
       <Modal />
     </>
   );
