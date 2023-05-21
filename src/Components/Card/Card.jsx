@@ -8,6 +8,7 @@ function Card() {
   const [img, setImg] = useState(null);
   const [abilities, setAbilities] = useState([]);
   const [type, setType] = useState([]);
+  const [value, setValue] = useState("");
 
   const handlerSum = () => {
     setId(id + 1);
@@ -15,6 +16,20 @@ function Card() {
 
   const handlerSubtract = () => {
     setId(id - 1);
+  };
+  const getValue = (e) => {
+    setValue(e.target.value);
+  };
+  const searchPokemon = () => {
+    if (value > 1010) {
+      alert("No exist Pokemons with this ID!");
+      setValue("");
+    }
+    else if (value === "") {
+      alert("Please, type a number from 1 to 1010");
+    } else {
+      setId(value);
+    }
   };
 
   const URL = `https://pokeapi.co/api/v2/pokemon/${id}/`;
@@ -58,13 +73,15 @@ function Card() {
         ))}
       </ul>
       <div>
-        <Button onClick={handlerSum}> + </Button>
+        <Button onClick={handlerSum} disabled={id === 1010}>
+          +
+        </Button>
         <Button onClick={handlerSubtract} disabled={id === 1}>
           -
         </Button>
-        <Button>OK</Button>
+        <Button onClick={searchPokemon}>OK</Button>
       </div>
-      <input type="number" />
+      <input type="number" value={value} id="inputValue" onChange={getValue} />
       <Modal />
     </>
   );
