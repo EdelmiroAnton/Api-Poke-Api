@@ -42,7 +42,7 @@ function Modal() {
             fontWeight: "bold",
           }}
         >
-          Bienvenido a la API de Pokemon!
+          Welcome to the Poke Api
         </DialogTitle>
         <DialogContent>
           <DialogContentText
@@ -54,10 +54,9 @@ function Modal() {
               color: "grey",
             }}
           >
-            En este sencillo simulador podrás buscar los 898 Pokemones que la
-            API tiene para ofrecernos. Tendrás su imagen, su nombre, sus
-            habilidades y que tipo de Pokemon es! Haz click en el botón para
-            comenzar.
+            With this simulator you can search over the 1010 Pokémons that the
+            API offer to us. You will see its image, its name, their abilities
+            and its type! Click the button to start!
           </DialogContentText>
         </DialogContent>
         <button onClick={closeModal} className="botonDialog">
