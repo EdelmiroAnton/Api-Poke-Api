@@ -17,4 +17,12 @@
   height: 150px;
 }
 
+.card_list {
+  list-style: none;
+  /* padding: ; */
+}
 
+.card_item {
+  align-items: center;
+  list-style-image: url("../../assets/pokebola.png");
+}

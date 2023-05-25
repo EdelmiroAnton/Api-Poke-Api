@@ -5,7 +5,7 @@ import "./styles.css";
 import { theme } from "../../theme.js";
 
 function Card() {
-  const [id, setId] = useState(5);
+  const [id, setId] = useState(16);
   const [name, setName] = useState("");
   const [img, setImg] = useState(null);
   const [abilities, setAbilities] = useState([]);
@@ -75,27 +75,52 @@ function Card() {
               >
                 ID: {id}
               </Typography>
-              <h4>Abilities</h4>
-              <ul>
-                {abilities.map((el) => (
-                  <li key={name.id}>
-                    {/* Get and Uppercase the first character of the string */}
-                    {el.ability.name.charAt(0).toUpperCase()}
-                    {/* Add the first character to the rest of the string */}
-                    {el.ability.name.slice(1)}
-                  </li>
-                ))}
-              </ul>
-              <h4>Pokémon Type</h4>
-              <ul>
-                {type.map((el) => (
-                  <li key={name.id}>
-                    {el.type.name.charAt(0).toUpperCase()}
-                    {el.type.name.slice(1)}
-                  </li>
-                ))}
-              </ul>
-              <div>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "space-evenly",
+                  alignItems: "center",
+                  width: "auto",
+                  backgroundColor: "#FFFBAC",
+                }}
+                fontFamily={theme.typography.fontFamily}
+              >
+                <Typography variant={theme.typography.h4}>Abilities</Typography>
+                <ul className="card_list">
+                  {abilities.map((el) => (
+                    <li key={name.id} className="card_item">
+                      {/* Get and Uppercase the first character of the string */}
+                      {el.ability.name.charAt(0).toUpperCase()}
+                      {/* Add the first character to the rest of the string */}
+                      {el.ability.name.slice(1)}
+                    </li>
+                  ))}
+                </ul>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "space-evenly",
+                  alignItems: "center",
+                  width: "auto",
+                  backgroundColor: "#FFD495",
+                }}
+                fontFamily={theme.typography.fontFamily}
+              >
+                <Typography variant={theme.typography.h4}>
+                  Pokémon <br />
+                  Type
+                </Typography>
+                <ul className="card_list">
+                  {type.map((el) => (
+                    <li key={name.id} className="card_item">
+                      {el.type.name.charAt(0).toUpperCase()}
+                      {el.type.name.slice(1)}
+                    </li>
+                  ))}
+                </ul>
+              </Box>
+              <Box>
                 <Button onClick={handlerSubtract} disabled={id === 1}>
                   -
                 </Button>
@@ -103,7 +128,7 @@ function Card() {
                   +
                 </Button>
                 <Button onClick={searchPokemon}>OK</Button>
-              </div>
+              </Box>
               <input
                 type="number"
                 value={value}
