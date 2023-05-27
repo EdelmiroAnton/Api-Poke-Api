@@ -1,6 +1,13 @@
 import { useEffect, useState } from "react";
 import Modal from "../Modal/Modal";
-import { Box, Button, ThemeProvider, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  ThemeProvider,
+  Typography,
+  Input,
+  TextField,
+} from "@mui/material";
 import "./styles.css";
 import { theme } from "../../theme.js";
 
@@ -120,21 +127,28 @@ function Card() {
                   ))}
                 </ul>
               </Box>
-              <Box>
-                <Button onClick={handlerSubtract} disabled={id === 1}>
-                  -
-                </Button>
-                <Button onClick={handlerSum} disabled={id === 1010}>
-                  +
-                </Button>
-                <Button onClick={searchPokemon}>OK</Button>
+              <Box sx={{ backgroundColor: "#FAAB78" }}>
+                <Box>
+                  <Button onClick={handlerSubtract} disabled={id === 1}>
+                    -
+                  </Button>
+                  <Button onClick={handlerSum} disabled={id === 1010}>
+                    +
+                  </Button>
+                  <Button onClick={searchPokemon}>OK</Button>
+                </Box>
+                <Box sx={{ display:"flex", justifyContent:"center" }}>
+                  <input
+                  className="input_id"
+                    placeholder="ID"
+                    type="number"
+                    // inputMode="numeric"
+                    value={value}
+                    id="inputValue"
+                    onChange={getValue}
+                  />
+                </Box>
               </Box>
-              <input
-                type="number"
-                value={value}
-                id="inputValue"
-                onChange={getValue}
-              />
             </Box>
           </ThemeProvider>
         </>
