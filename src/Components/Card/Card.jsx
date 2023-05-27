@@ -9,6 +9,7 @@ import {
   TextField,
 } from "@mui/material";
 import "./styles.css";
+import ButtonSubtractID from "../ButtonSubtractID/ButtonSubtractID";
 import { theme } from "../../theme.js";
 
 function Card() {
@@ -128,18 +129,42 @@ function Card() {
                 </ul>
               </Box>
               <Box sx={{ backgroundColor: "#FAAB78" }}>
-                <Box>
-                  <Button onClick={handlerSubtract} disabled={id === 1}>
-                    -
-                  </Button>
-                  <Button onClick={handlerSum} disabled={id === 1010}>
+                <Box sx={{ display: "flex", justifyContent: "center" }}>
+                  <ButtonSubtractID handlerSubtract={handlerSubtract} id={id} />
+
+                  <Button
+                    onClick={handlerSum}
+                    disabled={id === 1010}
+                    sx={{
+                      padding: "0",
+                      minWidth: "30px",
+                      height: "30px",
+                      color: "black",
+                      border: "0",
+                      borderRadius: "50%",
+                      backgroundColor: "#DDDDDD",
+                    }}
+                  >
                     +
                   </Button>
-                  <Button onClick={searchPokemon}>OK</Button>
+                  <Button
+                    onClick={searchPokemon}
+                    sx={{
+                      padding: "0",
+                      minWidth: "30px",
+                      height: "30px",
+                      color: "black",
+                      border: "0",
+                      borderRadius: "50%",
+                      backgroundColor: "#DDDDDD",
+                    }}
+                  >
+                    OK
+                  </Button>
                 </Box>
-                <Box sx={{ display:"flex", justifyContent:"center" }}>
+                <Box sx={{ display: "flex", justifyContent: "center" }}>
                   <input
-                  className="input_id"
+                    className="input_id"
                     placeholder="ID"
                     type="number"
                     // inputMode="numeric"
