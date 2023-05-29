@@ -1,18 +1,17 @@
 import { useEffect, useState } from "react";
-import Modal from "../Modal/Modal";
-import {
-  Box,
-  Button,
-  ThemeProvider,
-  Typography,
-  Input,
-  TextField,
-} from "@mui/material";
-import "./styles.css";
-import ButtonSubtractID from "../ButtonSubtractID/ButtonSubtractID";
 import { theme } from "../../theme.js";
+
+//Material UI
+import { Box, ThemeProvider, Typography } from "@mui/material";
+
+//Components
+import Modal from "../Modal/Modal";
+import ButtonSubtractID from "../ButtonSubtractID/ButtonSubtractID";
 import ButtonSumId from "../ButtonSumId/ButtonSumId";
 import ButtonOkId from "../ButtonOkId/ButtonOkId";
+
+//Styles
+import "./styles.css";
 
 function Card() {
   const [id, setId] = useState(16);
