@@ -146,7 +146,7 @@ function Card() {
                 <Box sx={{ display: "flex", justifyContent: "center" }}>
                   <input
                     className="input_id"
-                    placeholder="ID"
+                    placeholder="Type ID"
                     type="number"
                     id="inputValue"
                     onChange={getValue}
