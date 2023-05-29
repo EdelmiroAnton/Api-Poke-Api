@@ -33,7 +33,7 @@ function Modal() {
         open={open}
         aria-labelledby="dialog-title"
         aria-describedby="dialog-description"
-        sx={{backdropFilter:"blur(5px)"}}
+        sx={{ backdropFilter: "blur(5px)" }}
       >
         <DialogTitle
           id="dialog-title"

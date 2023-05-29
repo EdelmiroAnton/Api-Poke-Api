@@ -19,7 +19,7 @@ function Card() {
   const [img, setImg] = useState(null);
   const [abilities, setAbilities] = useState([]);
   const [type, setType] = useState([]);
-  const [value, setValue] = useState(null);
+  const [value, setValue] = useState("");
   const [showCard, setShowCard] = useState(false);
 
   const handlerSum = () => {
@@ -31,12 +31,9 @@ function Card() {
   };
 
   const getValue = (e) => {
-    setValue(Number(e.target.value))
-    // const val = e.target.value;
-    // const stringToNum = Number(val);
-    // setValue(stringToNum);
+    let val = Number(e.target.value);
+    setValue(val);
   };
-  console.log(value)
 
   const searchPokemon = () => {
     if (value > 1010) {
@@ -46,6 +43,7 @@ function Card() {
       alert("Please, type a number from 1 to 1010");
     } else {
       setId(value);
+      setValue("");
     }
   };
 
@@ -147,9 +145,12 @@ function Card() {
                   <input
                     className="input_id"
                     placeholder="Type ID"
-                    type="number"
+                    type="text"
                     id="inputValue"
                     onChange={getValue}
+                    minlength="1"
+                    maxlength="4"
+                    title="Type a number from 1 to 1010"
                   />
                 </Box>
               </Box>

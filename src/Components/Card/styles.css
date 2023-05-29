@@ -44,9 +44,9 @@
 .input_id {
   width: 25%;
   border-radius: 15%;
-  border: 1px rgb(73, 73, 73) solid;
+  border: 0px rgb(73, 73, 73) solid;
   margin-bottom: 5px;
-  background-color: transparent;
+  background-color: #dddddd;
   text-align: center;
   color: rgb(41, 39, 39);
   padding: 0;
