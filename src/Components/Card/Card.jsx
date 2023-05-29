@@ -92,7 +92,7 @@ function Card() {
                   alignItems: "center",
                   width: "auto",
                   backgroundColor: "#FFFBAC",
-                  minHeight:"110px"
+                  minHeight: "110px",
                 }}
                 fontFamily={theme.typography.fontFamily}
               >
@@ -115,6 +115,7 @@ function Card() {
                   alignItems: "center",
                   width: "auto",
                   backgroundColor: "#FFD495",
+                  minHeight: "90px",
                 }}
                 fontFamily={theme.typography.fontFamily}
               >
@@ -132,10 +133,10 @@ function Card() {
                 </ul>
               </Box>
               <Box sx={{ backgroundColor: "#FAAB78" }}>
-                <Box sx={{ display: "flex", justifyContent: "space-evenly"}}>
+                <Box sx={{ display: "flex", justifyContent: "space-evenly" }}>
                   <ButtonSubtractID handlerSubtract={handlerSubtract} id={id} />
-                  <ButtonOkId searchPokemon={searchPokemon}/>
-                  <ButtonSumId handlerSum={handlerSum} id={id} />                 
+                  <ButtonOkId searchPokemon={searchPokemon} />
+                  <ButtonSumId handlerSum={handlerSum} id={id} />
                 </Box>
                 <Box sx={{ display: "flex", justifyContent: "center" }}>
                   <input
