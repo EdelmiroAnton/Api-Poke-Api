@@ -33,6 +33,7 @@ function Modal() {
         open={open}
         aria-labelledby="dialog-title"
         aria-describedby="dialog-description"
+        sx={{backdropFilter:"blur(5px)"}}
       >
         <DialogTitle
           id="dialog-title"
@@ -59,8 +60,8 @@ function Modal() {
             and its type! Click the button to start!
           </DialogContentText>
         </DialogContent>
-        <button onClick={closeModal} className="botonDialog">
-          <span className="textButton">Comencemos!</span>
+        <button onClick={closeModal} className="buttonDialog">
+          <span className="textButton">Let's start!</span>
         </button>
       </Dialog>
     </>
