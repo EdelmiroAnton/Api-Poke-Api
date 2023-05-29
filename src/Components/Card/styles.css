@@ -39,20 +39,14 @@
   outline: none;
 }
 
-.input_id:hover{
+.input_id:hover {
   cursor: pointer;
 }
 /* Hide arrows on input type number when it is focused */
-/* For Chrome, Safari, Edge and Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-/* For Firefox */
-input[type=number]{
-  -moz-appearance: textfield;
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 ::placeholder {
