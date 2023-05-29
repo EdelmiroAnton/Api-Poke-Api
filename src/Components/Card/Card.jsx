@@ -131,10 +131,10 @@ function Card() {
                 </ul>
               </Box>
               <Box sx={{ backgroundColor: "#FAAB78" }}>
-                <Box sx={{ display: "flex", justifyContent: "center" }}>
+                <Box sx={{ display: "flex", justifyContent: "space-evenly"}}>
                   <ButtonSubtractID handlerSubtract={handlerSubtract} id={id} />
-                  <ButtonSumId handlerSum={handlerSum} id={id} />                 
                   <ButtonOkId searchPokemon={searchPokemon}/>
+                  <ButtonSumId handlerSum={handlerSum} id={id} />                 
                 </Box>
                 <Box sx={{ display: "flex", justifyContent: "center" }}>
                   <input

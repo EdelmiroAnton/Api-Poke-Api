@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Button } from "@mui/material";
 
-function ButtonSubtractID({handlerSubtract, id}) {
+function ButtonSubtractID({ handlerSubtract, id }) {
   return (
     <Box>
       <Button
@@ -15,6 +15,8 @@ function ButtonSubtractID({handlerSubtract, id}) {
           border: "0",
           borderRadius: "50%",
           backgroundColor: "#DDDDDD",
+          mt: "10px",
+          mb: "10px",
         }}
       >
         -

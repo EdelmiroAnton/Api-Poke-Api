@@ -15,6 +15,8 @@ function ButtonSumId({ handlerSum, id }) {
           border: "0",
           borderRadius: "50%",
           backgroundColor: "#DDDDDD",
+          mt: "10px",
+          mb: "10px",
         }}
       >
         +

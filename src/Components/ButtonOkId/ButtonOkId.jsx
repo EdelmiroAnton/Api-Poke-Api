@@ -1,7 +1,7 @@
 import { Box, Button } from "@mui/material";
 import React from "react";
 
-function ButtonOkId({searchPokemon}) {
+function ButtonOkId({ searchPokemon }) {
   return (
     <Box>
       <Button
@@ -14,6 +14,9 @@ function ButtonOkId({searchPokemon}) {
           border: "0",
           borderRadius: "50%",
           backgroundColor: "#DDDDDD",
+          fontWeight: "bolder",
+          mt: "10px",
+          mb: "10px",
         }}
       >
         OK
