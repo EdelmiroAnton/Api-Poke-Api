@@ -92,6 +92,7 @@ function Card() {
                   alignItems: "center",
                   width: "auto",
                   backgroundColor: "#FFFBAC",
+                  minHeight:"110px"
                 }}
                 fontFamily={theme.typography.fontFamily}
               >
