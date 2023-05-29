@@ -11,6 +11,7 @@ import {
 import "./styles.css";
 import ButtonSubtractID from "../ButtonSubtractID/ButtonSubtractID";
 import { theme } from "../../theme.js";
+import ButtonSumId from "../ButtonSumId/ButtonSumId";
 
 function Card() {
   const [id, setId] = useState(16);
@@ -131,22 +132,8 @@ function Card() {
               <Box sx={{ backgroundColor: "#FAAB78" }}>
                 <Box sx={{ display: "flex", justifyContent: "center" }}>
                   <ButtonSubtractID handlerSubtract={handlerSubtract} id={id} />
-
-                  <Button
-                    onClick={handlerSum}
-                    disabled={id === 1010}
-                    sx={{
-                      padding: "0",
-                      minWidth: "30px",
-                      height: "30px",
-                      color: "black",
-                      border: "0",
-                      borderRadius: "50%",
-                      backgroundColor: "#DDDDDD",
-                    }}
-                  >
-                    +
-                  </Button>
+                  <ButtonSumId handlerSum={handlerSum} id={id} />
+                  
                   <Button
                     onClick={searchPokemon}
                     sx={{
