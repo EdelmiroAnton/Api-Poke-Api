@@ -1,12 +1,11 @@
 import { Box, Button } from "@mui/material";
 import React from "react";
 
-function ButtonSumId({ handlerSum, id }) {
+function ButtonSumId({ handlerSum }) {
   return (
     <Box>
       <Button
         onClick={handlerSum}
-        disabled={id === 1}
         sx={{
           padding: "0",
           minWidth: "30px",

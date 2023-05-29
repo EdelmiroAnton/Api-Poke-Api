@@ -14,12 +14,12 @@ import ButtonOkId from "../ButtonOkId/ButtonOkId";
 import "./styles.css";
 
 function Card() {
-  const [id, setId] = useState(16);
+  const [id, setId] = useState(1);
   const [name, setName] = useState("");
   const [img, setImg] = useState(null);
   const [abilities, setAbilities] = useState([]);
   const [type, setType] = useState([]);
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState(null);
   const [showCard, setShowCard] = useState(false);
 
   const handlerSum = () => {
@@ -29,9 +29,15 @@ function Card() {
   const handlerSubtract = () => {
     setId(id - 1);
   };
+
   const getValue = (e) => {
-    setValue(e.target.value);
+    setValue(Number(e.target.value))
+    // const val = e.target.value;
+    // const stringToNum = Number(val);
+    // setValue(stringToNum);
   };
+  console.log(value)
+
   const searchPokemon = () => {
     if (value > 1010) {
       alert("No exist Pokemons with this ID!");
@@ -142,8 +148,6 @@ function Card() {
                     className="input_id"
                     placeholder="ID"
                     type="number"
-                    // inputMode="numeric"
-                    value={value}
                     id="inputValue"
                     onChange={getValue}
                   />
