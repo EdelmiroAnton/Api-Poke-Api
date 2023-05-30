@@ -1,4 +1,6 @@
 import { useEffect, useState, forwardRef } from "react";
+
+// Material UI
 import {
   Dialog,
   DialogTitle,
@@ -6,8 +8,10 @@ import {
   DialogContentText,
   Slide,
 } from "@mui/material";
+
 import "./styles.css";
 
+//Transition of the modal window
 const Transition = forwardRef(function Transition(props, ref) {
   return <Slide direction="right" ref={ref} {...props} />;
 });
@@ -16,6 +20,7 @@ function Modal() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
+    //After 1550 ms the modal window appears
     setTimeout(() => {
       setOpen(true);
     }, 1550);
