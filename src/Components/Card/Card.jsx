@@ -13,32 +13,37 @@ import ButtonOkId from "../ButtonOkId/ButtonOkId";
 //Styles
 import "./styles.css";
 
-
 function Card() {
-  const [id, setId] = useState(1);
-  const [name, setName] = useState("");
-  const [img, setImg] = useState(null);
-  const [abilities, setAbilities] = useState([]);
-  const [type, setType] = useState([]);
-  const [value, setValue] = useState("");
-  const [showCard, setShowCard] = useState(false);
+  const [id, setId] = useState(1); //Initial ID
+  const [name, setName] = useState(""); //State to get the name of the pokemon from the API
+  const [img, setImg] = useState(null); //State to get the img of the pokemon from the API
+  const [abilities, setAbilities] = useState([]); //State to get the ability of the pokemon from the API
+  const [type, setType] = useState([]); //State to get the pokemon type from the API
+  const [value, setValue] = useState(""); //State to handle the input ID value
+  const [showCard, setShowCard] = useState(false); //State that manage to show the main card after the Splash
 
+  //Function to sum 1 to the ID
   const handlerSum = () => {
     setId(id + 1);
   };
 
+  //Function to subtract 1 to the ID
   const handlerSubtract = () => {
     setId(id - 1);
   };
 
-  const getValue = (e) => {
+  //Function to get the ID from the input. Is triggered when the user press a key
+  const getInputId = (e) => {
+    //Input validation, only accept numbers from 0 to 9
     const inputId = document.querySelector("#inputValue");
     let valueInput = e.target.value;
     inputId.value = valueInput.replace(/[^0-9]/g, "");
+
     let val = Number(e.target.value);
     setValue(val);
   };
 
+  // Function triggered when the user click the "OK" button
   const searchPokemon = () => {
     if (value > 1010) {
       alert("No exist Pokemons with this ID!");
@@ -52,7 +57,6 @@ function Card() {
   };
 
   const URL = `https://pokeapi.co/api/v2/pokemon/${id}/`;
-
   useEffect(() => {
     const fetchPokemon = async () => {
       const data = await fetch(URL);
@@ -65,7 +69,7 @@ function Card() {
     fetchPokemon();
   }, [id]);
 
-  // To show the card component after 1510 milisecs
+  // Show the card component after 1510 milisecs (after the Splash)
   setTimeout(() => {
     setShowCard(true);
   }, 1510);
@@ -76,8 +80,10 @@ function Card() {
         <>
           <ThemeProvider theme={theme}>
             <Box className="card">
+              {/* POKEMON IMAGE */}
               <img src={img} alt="pokemon_image" className="pokemonImg" />
 
+              {/* POKEMON NAME */}
               <Typography
                 variant={theme.typography.h2}
                 fontFamily={theme.typography.fontFamily}
@@ -85,6 +91,8 @@ function Card() {
               >
                 {name.toUpperCase()}
               </Typography>
+
+              {/* POKEMON ID */}
               <Typography
                 sx={{ textAlign: "center" }}
                 variant={theme.typography.h4}
@@ -92,6 +100,8 @@ function Card() {
               >
                 ID: {id}
               </Typography>
+
+              {/* POKEMON ABILITIES */}
               <Box
                 sx={{
                   display: "flex",
@@ -115,6 +125,8 @@ function Card() {
                   ))}
                 </ul>
               </Box>
+
+              {/* POKEMON TYPE */}
               <Box
                 sx={{
                   display: "flex",
@@ -139,6 +151,8 @@ function Card() {
                   ))}
                 </ul>
               </Box>
+
+              {/* BUTTONS */}
               <Box sx={{ backgroundColor: "#FAAB78" }}>
                 <Box sx={{ display: "flex", justifyContent: "space-evenly" }}>
                   <ButtonSubtractID handlerSubtract={handlerSubtract} id={id} />
@@ -151,7 +165,7 @@ function Card() {
                     placeholder="Type ID"
                     type="text"
                     id="inputValue"
-                    onKeyUp={getValue}
+                    onKeyUp={getInputId}
                     minlength="1"
                     maxlength="4"
                     title="Type a number from 1 to 1010"
