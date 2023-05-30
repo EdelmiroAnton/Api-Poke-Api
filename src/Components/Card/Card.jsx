@@ -13,6 +13,7 @@ import ButtonOkId from "../ButtonOkId/ButtonOkId";
 //Styles
 import "./styles.css";
 
+
 function Card() {
   const [id, setId] = useState(1);
   const [name, setName] = useState("");
@@ -31,6 +32,9 @@ function Card() {
   };
 
   const getValue = (e) => {
+    const inputId = document.querySelector("#inputValue");
+    let valueInput = e.target.value;
+    inputId.value = valueInput.replace(/[^0-9]/g, "");
     let val = Number(e.target.value);
     setValue(val);
   };
@@ -147,7 +151,7 @@ function Card() {
                     placeholder="Type ID"
                     type="text"
                     id="inputValue"
-                    onChange={getValue}
+                    onKeyUp={getValue}
                     minlength="1"
                     maxlength="4"
                     title="Type a number from 1 to 1010"
