@@ -1,70 +1,148 @@
-.card {
-  max-width: 250px;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 90px;
-  border: none;
-  background-color: #d7e9b9;
-  box-shadow: 0px 0px 10px grey;
-  animation: flotar 3s infinite ease;
-}
+@media (width > 425px){
 
-@keyframes flotar {
-  0% {
-    transform: translate(0, 0px);
+  .card {
+    max-width: 250px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 90px;
+    border: none;
+    background-color: #d7e9b9;
+    box-shadow: 0px 0px 10px grey;
+    animation: flotar 3s infinite ease;
   }
-  50% {
-    transform: translate(0, 15px);
+  
+  @keyframes flotar {
+    0% {
+      transform: translate(0, 0px);
+    }
+    50% {
+      transform: translate(0, 15px);
+    }
+    100% {
+      transform: translate(0, 0px);
+    }
   }
-  100% {
-    transform: translate(0, 0px);
+  
+  .card .pokemonImg {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .pokemonImg {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .card_list {
+    list-style: none;
+  }
+  
+  .card_item {
+    align-items: center;
+    list-style-image: url("../../assets/pokebola.png");
+  }
+  
+  .input_id {
+    width: 25%;
+    border-radius: 15%;
+    border: 0px rgb(73, 73, 73) solid;
+    margin-bottom: 5px;
+    background-color: #dddddd;
+    text-align: center;
+    color: rgb(41, 39, 39);
+    padding: 0;
+    outline: none;
+  }
+  
+  .input_id:hover {
+    cursor: pointer;
+  }
+  /* Hide arrows on input type number when it is focused */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  ::placeholder {
+    padding: 10px;
+    font-weight: bold;
+    font-family: "Poppins";
   }
 }
 
-.card .pokemonImg {
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-}
+@media (width <= 425px){
 
-.pokemonImg {
-  width: 150px;
-  height: 150px;
-}
-
-.card_list {
-  list-style: none;
-}
-
-.card_item {
-  align-items: center;
-  list-style-image: url("../../assets/pokebola.png");
-}
-
-.input_id {
-  width: 25%;
-  border-radius: 15%;
-  border: 0px rgb(73, 73, 73) solid;
-  margin-bottom: 5px;
-  background-color: #dddddd;
-  text-align: center;
-  color: rgb(41, 39, 39);
-  padding: 0;
-  outline: none;
-}
-
-.input_id:hover {
-  cursor: pointer;
-}
-/* Hide arrows on input type number when it is focused */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-::placeholder {
-  padding: 10px;
-  font-weight: bold;
-  font-family: "Poppins";
+  .card {
+    max-width: 350px;
+    width: auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 90px;
+    border: none;
+    background-color: #d7e9b9;
+    box-shadow: 0px 0px 10px grey;
+    animation: flotar 3s infinite ease;
+  }
+  
+  @keyframes flotar {
+    0% {
+      transform: translate(0, 0px);
+    }
+    50% {
+      transform: translate(0, 15px);
+    }
+    100% {
+      transform: translate(0, 0px);
+    }
+  }
+  
+  .card .pokemonImg {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .pokemonImg {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .card_list {
+    list-style: none;
+  }
+  
+  .card_item {
+    align-items: center;
+    list-style-image: url("../../assets/pokebola.png");
+  }
+  
+  .input_id {
+    width: 25%;
+    border-radius: 15%;
+    border: 0px rgb(73, 73, 73) solid;
+    margin-bottom: 5px;
+    background-color: #dddddd;
+    text-align: center;
+    color: rgb(41, 39, 39);
+    padding: 0;
+    outline: none;
+  }
+  
+  .input_id:hover {
+    cursor: pointer;
+  }
+  /* Hide arrows on input type number when it is focused */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  ::placeholder {
+    padding: 10px;
+    font-weight: bold;
+    font-family: "Poppins";
+  }
 }
