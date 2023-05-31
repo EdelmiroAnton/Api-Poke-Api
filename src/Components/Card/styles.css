@@ -9,7 +9,6 @@
     background-color: #d7e9b9;
     box-shadow: 0px 0px 10px grey;
     animation: flotar 3s infinite ease;
-    color: blue;
   }
   
   @keyframes flotar {
@@ -85,7 +84,6 @@
     background-color: #d7e9b9;
     box-shadow: 0px 0px 10px grey;
     animation: flotar 3s infinite ease;
-    color: red;
   }
   
   @keyframes flotar {
