@@ -44,9 +44,10 @@
   }
   
   .input_id {
-    width: 25%;
+    width:25%;
     border-radius: 15%;
     border: 0px rgb(73, 73, 73) solid;
+    margin-top: 10px;
     margin-bottom: 5px;
     background-color: #dddddd;
     text-align: center;

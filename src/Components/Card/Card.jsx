@@ -154,15 +154,10 @@ function Card() {
 
               {/* BUTTONS */}
               <Box sx={{ backgroundColor: "#FAAB78" }}>
-                <Box sx={{ display: "flex", justifyContent: "space-evenly" }}>
-                  <ButtonSubtractID handlerSubtract={handlerSubtract} id={id} />
-                  <ButtonOkId searchPokemon={searchPokemon} />
-                  <ButtonSumId handlerSum={handlerSum} id={id} />
-                </Box>
                 <Box sx={{ display: "flex", justifyContent: "center" }}>
                   <input
                     className="input_id"
-                    placeholder="Type ID"
+                    placeholder="# ID"
                     type="text"
                     id="inputValue"
                     onKeyUp={getInputId}
@@ -170,6 +165,11 @@ function Card() {
                     maxlength="4"
                     title="Type a number from 1 to 1010"
                   />
+                </Box>
+                <Box sx={{ display: "flex", justifyContent: "space-evenly" }}>
+                  <ButtonSubtractID handlerSubtract={handlerSubtract} id={id} />
+                  <ButtonOkId searchPokemon={searchPokemon} />
+                  <ButtonSumId handlerSum={handlerSum} id={id} />
                 </Box>
               </Box>
             </Box>
