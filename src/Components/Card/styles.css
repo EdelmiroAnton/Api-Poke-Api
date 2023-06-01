@@ -4,7 +4,7 @@
     max-width: 250px;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 90px;
+    margin-top: 60px;
     border: none;
     background-color: #d7e9b9;
     box-shadow: 0px 0px 10px grey;
@@ -80,7 +80,7 @@
     width: auto;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 90px;
+    margin-top: 60px;
     border: none;
     background-color: #d7e9b9;
     box-shadow: 0px 0px 10px grey;
@@ -123,6 +123,7 @@
     width: 25%;
     border-radius: 15%;
     border: 0px rgb(73, 73, 73) solid;
+    margin-top: 10px;
     margin-bottom: 5px;
     background-color: #dddddd;
     text-align: center;
