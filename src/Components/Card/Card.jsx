@@ -22,6 +22,7 @@ function Card() {
   const [value, setValue] = useState(""); //State to handle the input ID value
   const [showCard, setShowCard] = useState(false); //State that manage to show the main card after the Splash
 
+
   //Function to sum 1 to the ID
   const handlerSum = () => {
     setId(id + 1);
@@ -164,11 +165,12 @@ function Card() {
                     minlength="1"
                     maxlength="4"
                     title="Type a number from 1 to 1010"
+                    autoFocus
                   />
-                </Box>
-                <Box sx={{ display: "flex", justifyContent: "space-evenly" }}>
-                  <ButtonSubtractID handlerSubtract={handlerSubtract} id={id} />
                   <ButtonOkId searchPokemon={searchPokemon} />
+                </Box>
+                <Box sx={{ display: "flex", justifyContent: "center" }}>
+                  <ButtonSubtractID handlerSubtract={handlerSubtract} id={id} />
                   <ButtonSumId handlerSum={handlerSum} id={id} />
                 </Box>
               </Box>

@@ -16,6 +16,7 @@ function ButtonSumId({ handlerSum }) {
           backgroundColor: "#DDDDDD",
           mt: "10px",
           mb: "10px",
+          boxShadow: "0 2px 3px rgba(0, 0, 0, 0.5)",
         }}
       >
         +
